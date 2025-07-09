@@ -1,4 +1,3 @@
-import React from "react";
 import "./Subinfo.css";
 
 // Import dinosaur images from assets
@@ -13,13 +12,13 @@ import Zeus from "../assets/Zeus.png";
 
 const Subinfo = () => {
   const dinosaurs = [
-    { name: "Idea",  image: Idea_Penguin14 },
-    { name: "Zeus",  image: Image },
-    { name: "Minion", image: Minion_Penguin24 },
-    { name: "Bronto", image: Penguin1 },
-    { name: "Royalty", image: Royal_Penguin5 },
-    { name: "Yoda",  image: Yoda_Penguin6 },
-    { name: "Weed",  image: Weed_Penguin6 },
+    { name: "Idea",  image: Idea_Penguin14, color: "idea" },
+    { name: "Zeus",  image: Image, color: "zeus" },
+    { name: "Minion", image: Minion_Penguin24, color: "minion" },
+    { name: "Bronto", image: Penguin1, color: "bronto" },
+    { name: "Royalty", image: Royal_Penguin5, color: "royalty" },
+    { name: "Yoda",  image: Yoda_Penguin6, color: "yoda" },
+    { name: "Weed",  image: Weed_Penguin6, color: "weed" },
   ];
 
   return (

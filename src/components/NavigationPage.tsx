@@ -1,4 +1,3 @@
-import React from 'react';
 import { X } from 'lucide-react';
 import './NavigationPage.css';
 import { useNavigate } from 'react-router-dom';

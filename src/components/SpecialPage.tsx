@@ -1,4 +1,4 @@
-import React from 'react';
+
 import './SpecialPage.css';
 
 const SpecialPage = () => {
