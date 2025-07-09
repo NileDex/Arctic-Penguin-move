@@ -1,0 +1,79 @@
+.special-page-wrapper {
+  min-height: 100vh;
+  background: var(--darker-bg, #0a0a0a);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+}
+
+.special-content-container {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.special-title {
+  font-size: 2.8rem;
+  font-weight: 900;
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.special-roles-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.special-role-card {
+  background: rgba(255,255,255,0.04);
+  border-radius: 18px;
+  padding: 2.2rem 1.5rem 1.5rem 1.5rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: box-shadow 0.3s;
+}
+
+.special-role-card:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+}
+
+.special-role-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 0.7rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.special-role-sub {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #b3e6ff;
+  margin-left: 0.5rem;
+}
+
+.special-role-desc {
+  font-size: 1.15rem;
+  color: #e0e0e0;
+  margin: 0;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .special-title {
+    font-size: 2rem;
+  }
+  .special-role-title {
+    font-size: 1.3rem;
+  }
+  .special-role-card {
+    padding: 1.2rem 0.7rem 1rem 0.7rem;
+  }
+} 

@@ -1,0 +1,421 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --dark-bg: #121212;
+  --darker-bg: #0a0a0a;
+  --card-bg: #1e1e1e;
+  --primary-accent: #ffd837;
+  --secondary-accent: #00ff88;
+  --text-primary: #f5f5f5;
+  --text-secondary: #b0b0b0;
+  --navbar-bg: rgba(18, 18, 18, 0.9);
+  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-page-wrapper {
+  min-height: 100vh;
+  background: var(--darker-bg);
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.nav-page-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+  opacity: 0.3;
+}
+
+.nav-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--secondary-accent);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.nav-header-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.nav-connect-btn {
+  background: white;
+  border: none;
+  color: #2d6a4f;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: var(--transition);
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.nav-connect-btn:hover {
+  background: #f0f0f0;
+  transform: translateY(-2px);
+}
+
+.nav-close-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid white;
+  color: white;
+  padding: 0.6rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
+.nav-close-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(90deg);
+}
+
+.nav-main-content {
+  position: relative;
+  z-index: 100;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: calc(100vh - 120px);
+  overflow-x: hidden;
+}
+
+.nav-content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.nav-left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.nav-right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.nav-main-title {
+  font-size: 6rem;
+  font-weight: 900;
+  color: white;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  line-height: 0.9;
+}
+
+.nav-about-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.nav-tabs-container {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.nav-tab {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.nav-tab.active {
+  border-bottom-color: white;
+}
+
+/* Desktop Cards Layout - No Scrolling */
+.nav-cards-scroll-container {
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding-bottom: 1rem;
+}
+
+.nav-cards-wrapper {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.nav-card-item {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: var(--transition);
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  width: calc(33.333% - 0.666rem); /* 3 cards with gap */
+  height: 200px;
+  flex-shrink: 0;
+}
+
+.nav-card-item:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-card-img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Card Background Images */
+.nav-card-img.characters {
+  background-image: url('../assets/image.png');
+}
+
+.nav-card-img.claynotopia {
+  background-image: url('../assets/Pillars3.png');
+  background-color: rgba(0, 255, 136, 0.2);
+}
+
+.nav-card-img.lore {
+  background-image: url('../assets/Royal_Penguin50.png');
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-card-img.roadmap {
+  background: linear-gradient(135deg, #b3e6ff 0%, #5dade2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  color: #fff;
+  background-image: url('data:image/svg+xml;utf8,<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="8" width="32" height="32" rx="8" fill="%235dade2"/><path d="M16 32L24 16L32 32" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Fallback overlay for better text readability */
+.nav-card-img::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.nav-card-label {
+  padding: 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.nav-links-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.nav-link-item {
+  font-size: 3rem;
+  font-weight: 900;
+  color: white;
+  cursor: pointer;
+  transition: var(--transition);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  line-height: 1.1;
+}
+
+.nav-link-item:hover {
+  color: var(--secondary-accent);
+  transform: translateX(10px);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .nav-content-grid {
+    gap: 2rem;
+  }
+  
+  .nav-main-title {
+    font-size: 4.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-header {
+    padding: 1rem;
+  }
+
+  .nav-main-content {
+    padding: 1rem;
+  }
+
+  .nav-content-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .nav-right-column {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .nav-main-title {
+    font-size: 3.5rem;
+  }
+
+  /* Mobile Cards Layout - With Horizontal Scrolling */
+  .nav-cards-scroll-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+    padding-left: -1rem;
+    padding-right: 1rem;
+    margin-left: -1rem;
+    margin-right: -5rem;
+  }
+
+  .nav-cards-wrapper {
+    display: flex;
+    gap: 1rem;
+    width: max-content;
+    flex-wrap: nowrap;
+    padding-right: calc(1rem + env(safe-area-inset-right));
+    padding-left: calc(1rem + env(safe-area-inset-left));
+  }
+
+  .nav-card-item {
+    width: 180px;
+    height: 180px;
+  }
+
+  .nav-link-item {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-main-title {
+    font-size: 2.8rem;
+  }
+
+  .nav-link-item {
+    font-size: 2.4rem;
+    margin-bottom: 1.2rem;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    letter-spacing: 0.03em;
+  }
+
+  .nav-card-item {
+    width: 160px;
+    height: 160px;
+  }
+
+  .nav-connect-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  .nav-cards-wrapper {
+    padding-right: calc(0.5rem + env(safe-area-inset-right));
+    padding-left: calc(0.5rem + env(safe-area-inset-left));
+  }
+}
+
+.snow-bg {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.snowflake {
+  position: absolute;
+  top: -2rem;
+  color: #fff;
+  font-size: 1.2rem;
+  opacity: 0.8;
+  pointer-events: none;
+  animation: fall-snow linear infinite;
+}
+
+@keyframes fall-snow {
+  0% {
+    transform: translateY(-2rem);
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}

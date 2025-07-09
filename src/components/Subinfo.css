@@ -1,0 +1,270 @@
+/* DinosaurShowcase.css */
+
+.showcase-banner {
+  min-height: 300px;
+  padding: 2rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.showcase-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  height: 100%;
+}
+
+.content-left {
+  flex: 1;
+  max-width: 500px;
+}
+
+.main-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 1rem 0;
+  line-height: 1.1;
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+  background-clip: unset;
+  text-shadow: none;
+  position: relative;
+  animation: none;
+}
+
+.main-title::after {
+  display: none;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #fff;
+  margin: 0 0 2rem 0;
+  line-height: 1.5;
+}
+
+.cta-button {
+  background: #a29c90;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.5px;
+}
+
+.cta-button:hover {
+  background:#a29c90;
+  transform: translateY(-2px);
+
+}
+
+.collections-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.8rem;
+  max-width: 420px;
+}
+
+.collection-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.collection-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 15px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.collection-image:hover {
+  transform: scale(1.1);
+}
+
+.collection-name {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+}
+
+.content-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dinosaur-display {
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dino-placeholder {
+  border-radius: 20px;
+  padding: 3rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-penguin-image {
+  width: 700px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 20px;
+  filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.15))
+          drop-shadow(0 5px 10px rgba(0, 0, 0, 0.1));
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .showcase-content {
+    gap: 2rem;
+  }
+
+  .main-title {
+    font-size: 3rem;
+  }
+
+  .collections-grid {
+    max-width: 420px;
+  }
+
+  .collection-image {
+    width: 70px;
+    height: 70px;
+  }
+
+  .main-penguin-image {
+    width: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .showcase-banner {
+    padding: 1.5rem;
+    min-height: 600px;
+  }
+
+  .showcase-content {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .content-left {
+    max-width: 100%;
+  }
+
+  .main-title {
+    font-size: 2.5rem;
+  }
+
+  .collections-grid {
+    justify-self: center;
+    max-width: 100%;
+    margin: 0 auto;
+    order: -1;
+    margin-bottom: 2rem;
+    gap: 1rem;
+  }
+
+  .collection-image {
+    width: 60px;
+    height: 60px;
+  }
+
+  .collection-name {
+    font-size: 0.8rem;
+  }
+
+  .dinosaur-display {
+    height: 300px;
+  }
+
+  .main-penguin-image {
+    width: 500px;
+  }
+}
+
+@media (max-width: 480px) {
+  .showcase-banner {
+    padding: 1rem;
+  }
+
+  .main-title {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .collections-grid {
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.5rem;
+    max-width: 100%;
+    margin-bottom: 2.5rem;
+    padding: 0 0.5rem;
+  }
+
+  .collection-image {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+  }
+
+  .collection-name {
+    font-size: 0.65rem;
+    font-weight: 600;
+  }
+
+  .cta-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .main-penguin-image {
+    width: 350px;
+  }
+}
+
+@media (max-width: 360px) {
+  .collections-grid {
+    gap: 0.3rem;
+    padding: 0 0.2rem;
+  }
+
+  .collection-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+  }
+
+  .collection-name {
+    font-size: 0.6rem;
+  }
+
+  .main-penguin-image {
+    width: 300px;
+  }
+}

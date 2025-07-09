@@ -1,0 +1,189 @@
+
+.footer-bottom {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 40px 0;
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-bottom-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.footer-logo .logo-text {
+  font-size: 24px;
+  font-weight: 800;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.footer-legal {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  font-size: 14px;
+}
+
+.footer-legal span {
+  color: var(--text-secondary);
+}
+
+.footer-legal a {
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: var(--transition);
+  position: relative;
+}
+
+.footer-legal a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--primary-accent);
+  transition: var(--transition);
+}
+
+.footer-legal a:hover::after {
+  width: 100%;
+}
+
+.footer-legal a:hover {
+  color: var(--primary-accent);
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 25px;
+}
+
+.footer-tagline {
+  font-size: 16px;
+  color: var(--text-secondary);
+  font-style: italic;
+  max-width: 300px;
+  text-align: right;
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  color: var(--text-secondary);
+  transition: var(--transition);
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.social-link svg {
+  width: 20px;
+  height: 20px;
+}
+
+.social-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-3px);
+  color: var(--primary-accent);
+}
+
+.social-link.twitter:hover {
+  color: #1da1f2;
+}
+
+.social-link.instagram:hover {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  color: white;
+}
+
+.social-link.discord:hover {
+  color: #7289da;
+}
+
+.social-link.youtube:hover {
+  color: #ff0000;
+}
+
+.social-link.tiktok:hover {
+  color: #fe2c55;
+}
+
+.social-link.linkedin:hover {
+  color: #0077b5;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .footer-bottom-container {
+    padding: 0 30px;
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+  
+  .footer-right {
+    align-items: center;
+  }
+  
+  .footer-tagline {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+ 
+  
+  .footer-bottom {
+  
+    padding: 30px 0;
+  }
+  
+  .footer-left,
+  .footer-right {
+    gap: 20px;
+  }
+  
+  .footer-legal {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-bottom-container {
+    padding: 0 20px;
+  }
+  
+  .social-links {
+    gap: 15px;
+  }
+  
+  .social-link {
+    width: 42px;
+    height: 42px;
+  }
+}
