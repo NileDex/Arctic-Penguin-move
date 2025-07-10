@@ -71,10 +71,10 @@ const NavigationPage = () => {
           <div className="nav-right-column">
             <div className="nav-links-scroll-container"> {/* Added scroll container */}
               <div className="nav-links-wrapper"> {/* Added wrapper for links */}
-                <div className="nav-link-item">What's new</div>
-                <div className="nav-link-item">Values & team</div>
-                <div className="nav-link-item">Media</div>
-                <div className="nav-link-item">Community</div>
+                <div className="nav-link-item">****</div>
+                <div className="nav-link-item">****</div>
+                <div className="nav-link-item">****</div>
+                <div className="nav-link-item">****</div>
                 {/* Add more items if needed */}
               </div>
             </div>
