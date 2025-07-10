@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import './PriestPage.css';
 import hero from '../assets/hero.mp4';
 
