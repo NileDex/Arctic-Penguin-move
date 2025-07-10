@@ -22,7 +22,7 @@ const LorePage = () => {
       </section>
       <section className="lore-content-section">
         <div className="lore-content-container">
-          <h2 className="lore-content-heading">Arctic Penguin: The Movement Ice Age ❄️​</h2>
+          <h2 className="lore-content-heading">Arctic Penguin: The Movement Ice Age ❄️</h2>
           <p className="lore-content-text">
             <strong>Founding Story</strong><br /><br />
             In the depths of a forgotten Ice Age, sentient penguins constructed the Icebound Parthenon to protect a relic of immense power—the Frost blood Shard, a mythical source of unity and wisdom. Over time, the shard was buried beneath the frost and lost to memory.<br /><br />
