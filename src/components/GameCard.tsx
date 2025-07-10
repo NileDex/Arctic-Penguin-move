@@ -36,8 +36,8 @@ const GameCards = () => {
     },
     {
       id: 3,
-      title: "Waddle",
-      buttonText: "START YOUR JOURNEY",
+      title: "Start Your Journey",
+      buttonText: "WADDLE",
       image: Cool_Penguin3,
       gradient: "linear-gradient(135deg, rgba(255, 140, 0, 0.8) 0%, rgba(220, 20, 60, 0.6) 100%)",
       isWide: true

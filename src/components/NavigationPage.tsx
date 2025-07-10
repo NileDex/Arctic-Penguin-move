@@ -53,11 +53,11 @@ const NavigationPage = () => {
                 <div className="nav-cards-wrapper">
                   <div className="nav-card-item">
                     <div className="nav-card-img characters"></div>
-                    <div className="nav-card-label">Characters</div>
+                    <div className="nav-card-label">Huddle</div>
                   </div>
                   <div className="nav-card-item">
                     <div className="nav-card-img claynotopia"></div>
-                    <div className="nav-card-label">Claynotopia</div>
+                    <div className="nav-card-label">Waddle</div>
                   </div>
                   <div className="nav-card-item" onClick={() => navigate('/lore')} style={{ cursor: 'pointer' }}>
                     <div className="nav-card-img lore"></div>
