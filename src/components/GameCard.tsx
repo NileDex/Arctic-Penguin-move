@@ -25,14 +25,16 @@ const GameCards = () => {
       title: "Origin story",
       buttonText: "LORE",
       image: Royal_Penguin5,
-      gradient: "linear-gradient(135deg, rgba(139, 69, 19, 0.8) 0%, rgba(0, 0, 0, 0.6) 100%)"
+      gradient: "linear-gradient(135deg, rgba(139, 69, 19, 0.8) 0%, rgba(0, 0, 0, 0.6) 100%)",
+      description: "Discover the beginnings of the Arctic Penguin collection and its lore."
     },
     {
       id: 2,
       title: "Arctic",
       buttonText: "Colony",
       image: World,
-      gradient: ""
+      gradient: "",
+      description: "Explore the vibrant Arctic Colony and its creative community."
     },
     {
       id: 3,
@@ -40,7 +42,8 @@ const GameCards = () => {
       buttonText: "WADDLE",
       image: Cool_Penguin3,
       gradient: "linear-gradient(135deg, rgba(255, 140, 0, 0.8) 0%, rgba(220, 20, 60, 0.6) 100%)",
-      isWide: true
+      isWide: true,
+      description: "Begin your adventure and join the Waddle!"
     }
   ];
 
@@ -64,17 +67,24 @@ const GameCards = () => {
             >
               <div className="card-content">
                 <h2 className="card-title">{card.title}</h2>
-                <button
-                  className="card-button"
-                  onClick={e => {
-                    e.stopPropagation();
-                    if (card.buttonText.toLowerCase() === 'lore') navigate('/lore');
-                    else if (card.buttonText.toLowerCase() === 'colony') navigate('/colony');
-                    else if (card.title.toLowerCase() === 'waddle') navigate('/waddle');
-                  }}
-                >
-                  {card.buttonText}
-                </button>
+                {activeIndex === index && (
+                  <>
+                    {card.description && (
+                      <p className="card-description">{card.description}</p>
+                    )}
+                    <button
+                      className="card-button"
+                      onClick={e => {
+                        e.stopPropagation();
+                        if (card.buttonText.toLowerCase() === 'lore') navigate('/lore');
+                        else if (card.buttonText.toLowerCase() === 'colony') navigate('/colony');
+                        else if (card.title.toLowerCase() === 'waddle') navigate('/waddle');
+                      }}
+                    >
+                      {card.buttonText}
+                    </button>
+                  </>
+                )}
               </div>
             </div>
           </div>

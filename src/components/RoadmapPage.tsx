@@ -5,27 +5,27 @@ import hero from '../assets/hero.mp4';
 const roadmap = [
   {
     title: 'Genesis Launch',
-    date: 'Q1 2024',
+    date: 'Phase 1',
     description: 'The Arctic Penguin collection is born. Early supporters join the Waddle and the first lore is written.'
   },
   {
     title: 'Community Building',
-    date: 'Q2 2024',
+    date: 'Phase 2',
     description: 'Events, contests, and collaborations to grow the Colony and foster creativity.'
   },
   {
     title: 'Lore Expansion',
-    date: 'Q3 2024',
+    date: 'Phase 3',
     description: 'New stories, characters, and art are added, deepening the world and its legends.'
   },
   {
     title: 'Movement Integration',
-    date: 'Q4 2024',
+    date: 'Phase 4',
     description: 'Partnerships and features with Movement Labs, bringing new utility and adventures.'
   },
   {
     title: 'Future Quests',
-    date: '2025+',
+    date: 'Future Phases',
     description: 'Ongoing updates, quests, and surprises as the Arctic Penguin universe evolves.'
   }
 ];
